@@ -1,0 +1,294 @@
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+header{
+    width: 100%;//最顶上的图片
+    img{
+        width: 100%;//图片宽
+    }
+}
+#abs{
+    position: absolute;
+    top: 250px;
+    left: 299px;
+    height: 460px;
+    background: white;
+    z-index: 3333;
+    width: 300px;
+    display: none;
+    >div{
+        position: absolute;
+        top: 0;
+        height: 460px;
+        background: white;
+        width: 100%;
+        display: none;
+        p:hover{
+            background: orange;
+        }
+        a{
+            text-decoration: none;
+            color: #000000;
+        }
+    }
+}
+nav{
+    width: 100%;//全屏宽
+    background: #363636;//背景色
+    >div{//导航栏中的中间容器
+        width: 1226px;
+        margin: 0 auto;//居中
+        ul{//导航栏中的三个ul
+            margin-bottom: 0;
+            li{//导航栏中的三个ul中的li
+                float: left;//全部左浮动
+            }
+            &:after{//全部请浮动
+                display: block;
+                clear: both;
+                content: '';
+            }
+        }
+        ul:nth-child(1){//第一个ul--最左边的
+            float: left;
+            padding: 14px 0;
+            li{
+                padding: 0 8px;
+                border-left: solid 1px #454545;
+                a{
+                    width: 100%;
+                    text-align: center;
+                    text-decoration: none;
+                    color: #B0B0B0;
+                    font-size: 12px;
+                }
+            }
+            li:first-child{
+                border: none;
+            }
+        }
+        ul:nth-child(2){//第二个--最右边的
+            float: right;
+            li{
+                padding: 14px 8px;
+                background: #454545;
+                a{
+                    width: 100%;
+                    text-align: center;
+                    text-decoration: none;
+                    color: #B0B0B0;
+                    font-size: 12px;
+                }
+                
+            }
+        }
+        ul:nth-child(3){//第三个
+            float: right;
+            padding: 14px 0;
+            li{
+                padding: 0 8px;
+                border-right: solid 1px #454545;
+                a{
+                    width: 100%;
+                    text-align: center;
+                    text-decoration: none;
+                    color: #B0B0B0;
+                    font-size: 12px;
+                }
+                
+            }
+            li:last-child{
+                border: none;
+            }
+        }
+        &:after{
+            display: block;
+            clear: both;
+            content: '';
+        }
+    }
+}
+article{
+    width: 1226px;
+    margin: 0 auto;
+    position: relative;
+    section:nth-child(1){//小米标志那一排
+        width: 100%;
+        >div{//用的三个div包着，所以让他们全部左浮动
+            float: left;
+            padding: 23px 0;
+        }
+        &:after{//清除div浮动
+            display: block;
+            clear: both;
+            content: '';
+        }
+        >div:nth-child(1){//包着两个标志
+            width: 167px;
+            img:nth-child(2){
+                float: right;
+            }
+        }
+        >div:nth-child(2){//中间的ul
+            margin-left: 70px;
+            ul{
+                li{
+                    float: left;
+                    padding: 15px 10px;
+                    a{
+                        text-decoration: none;
+                        color: #363636;
+                        font-family: "微软雅黑";
+                        font-size: 15.5px;
+                    }
+                }
+            }
+        }
+        >div:nth-child(3){//边上的搜索框
+            input:nth-child(1){//搜索框
+//              width: 243px;
+                float: left;
+                outline: none;
+                border: solid 1px #E0E0E0;
+                margin: 0 0 0 45px;
+                padding: 15px 100px 15px 30px;
+                &::-webkit-input-placeholder{
+                    font-family: "微软雅黑";
+                    font-size: 13px;
+                    text-transform:uppercase;
+                    background: #EEEEEE;
+                }
+            }
+            input:nth-child(2){//按钮狂
+                width: 50px;
+                height: 52px;
+                float: left;
+                border: solid 1px #E0E0E0;
+                outline: none;
+                background-image: url(../img/ss.jpg);
+                background-repeat: no-repeat;
+                background-position: 50%;
+                background-color: white;
+            }
+            &:after{
+                display: block;
+                clear: both;
+                content: '';
+            }
+        }
+    }
+//  section:nth-child(2){
+//      
+//  }
+    section:nth-child(3){
+        width: 234px;
+        background: #0B0B0D;
+        position: absolute;
+        top: 101px;
+        z-index: 3;
+        ul{
+            padding: 20px 0 10px 0;
+            margin-bottom: 0;
+            li{
+                height: 43px;
+                line-height: 43px;
+                padding: 0 15px 0 30px;
+                a{
+                    text-decoration: none;
+                    font-size: 16px;
+                    color: white;
+                    span:nth-child(2){
+                        float: right;
+                        margin-top: 13px;
+                        color: #A08F75;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+    section:nth-child(4){
+        width: 1226px;
+        margin: 0 auto;
+        margin-top: 14px;
+        >div{//两个部分
+            float: left;
+        }
+        &:after{
+            display: block;
+            clear: both;
+            content: '';
+        }
+        >div:nth-child(1){//第一个部分--六个小图标
+            background: #5F5851;
+            >div{//上下两层
+                >div{
+                    float: left;
+                    text-align: center;
+                    border-left: solid 1px #665E58;
+                    border-bottom: solid 1px #665E58;
+                    padding: 14px 11px 10px 14px;
+                    p{
+                        width: 100%;
+                        margin-top: 7px;
+                        text-align: center;
+                        a{
+                            text-decoration: none;
+                            color: #CDCAC8;
+                            font-family: "微软雅黑";
+                            font-size: 13px;
+                        }
+                    }
+                }
+                >div:first-child{
+                    border: none;
+                }
+                &:after{
+                    display: block;
+                    clear: both;
+                    content: '';
+                }
+            }
+//          >div:nth-child(1){//上面那一层
+//              padding: 9px 0 6px 0;
+//              border-bottom: solid 1px #665E58;
+//          }
+//          >div:nth-child(2){//上面那一层
+//              padding: 6px 0 9px 0;
+//          }
+        }
+        >div:nth-child(2){//第二部分--三张图片
+            >div{
+                float: left;
+                margin-left: 14px;
+            }
+            &:after{
+                display: block;
+                clear: both;
+                content: '';
+            }
+        }
+    }
+    section:nth-child(5){
+        width: 1226px;
+        margin: 0 auto;
+        margin-top: 40px;
+        >div:nth-child(1){//左边的字
+            float: left;
+        }
+        >div:nth-child(2){//右边的按钮
+            float: right;
+        }
+        &:after{
+            display: block;
+            clear: both;
+            content: '';
+        }
+    }
+}
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next{
+    left: 250px;
+}
